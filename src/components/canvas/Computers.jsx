@@ -7,8 +7,6 @@ import CanvasLoader from "../Loader";
 const Computers = () => {
   const computer = useGLTF("./computer_stack/scene.gltf");
 
-  console.log(computer);
-
   return (
     <mesh>
       <hemisphereLight intensity={0.5} groundColor="black" />
@@ -23,7 +21,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [0, 0, 6], fov: 50 }}
+      camera={{ position: [0, 0, 6.5], fov: 50 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -32,8 +30,8 @@ const ComputersCanvas = () => {
           minPolarAngle={Math.PI / 2}
           enableZoom={false}
           enablePan={false}
-          maxAzimuthAngle={Math.PI / 7}
-          minAzimuthAngle={-Math.PI / 7}
+          maxAzimuthAngle={Math.PI / 8}
+          minAzimuthAngle={-Math.PI / 8}
         />
         <Computers />
       </Suspense>

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 
-const GlitchedText = ({ text }) => {
+const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
   const [currentText, setCurrentText] = useState(text);
   const iterationRef = useRef(0);
   const intervalRef = useRef(null);
@@ -18,7 +18,7 @@ const GlitchedText = ({ text }) => {
       });
       setCurrentText(newText.join(""));
 
-      iterationRef.current += 1 / 3;
+      iterationRef.current += 1 / 4;
       if (iterationRef.current >= text.length) {
         clearInterval(intervalRef.current);
       }
@@ -27,12 +27,26 @@ const GlitchedText = ({ text }) => {
 
   useEffect(() => {
     handleMouseOver();
-    return () => {
-      clearInterval(intervalRef.current);
-    };
   }, []);
 
-  return <h1 onMouseOver={handleMouseOver}>{currentText}</h1>;
+  if (span) {
+    const h1Text = currentText.slice(0, span);
+    const spanText = currentText.slice(span);
+    return (
+      <h1 onMouseOver={handleMouseOver} className={classStyles}>
+        {h1Text}
+        <span onMouseOver={handleMouseOver} className={spanStyles}>
+          {spanText}
+        </span>
+      </h1>
+    );
+  }
+
+  return (
+    <h1 onMouseOver={handleMouseOver} className={classStyles}>
+      {currentText}
+    </h1>
+  );
 };
 
 export default GlitchedText;
