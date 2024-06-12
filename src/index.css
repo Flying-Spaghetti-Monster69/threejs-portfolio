@@ -26,6 +26,15 @@
   color-scheme: dark;
 }
 
+.centered-div {
+  width: fit-content; /* Set the width to fit content */
+  position: absolute; /* Make the div positionable */
+  top: 50%; /* Set top position to 50% */
+  transform: translateY(-50%); /* Offset vertically by half its height */
+  left: 50%; /* Set left position to 50% */
+  transform: translateX(-50%); /* Offset horizontally by half its width */
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
