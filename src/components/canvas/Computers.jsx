@@ -17,6 +17,23 @@ const Computers = () => {
 };
 
 const ComputersCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <Canvas
       frameloop="demand"
@@ -30,8 +47,8 @@ const ComputersCanvas = () => {
           minPolarAngle={Math.PI / 2}
           enableZoom={false}
           enablePan={false}
-          maxAzimuthAngle={Math.PI / 8}
-          minAzimuthAngle={-Math.PI / 8}
+          maxAzimuthAngle={isMobile ? Math.PI / 4 : Math.PI / 8}
+          minAzimuthAngle={isMobile ? -Math.PI / 4 : -Math.PI / 8}
         />
         <Computers />
       </Suspense>
