@@ -1,7 +1,7 @@
 import {
   web,
   javascript,
-  typescript,
+  zustand,
   html,
   css,
   reactjs,
@@ -10,8 +10,6 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
   threejs,
   universidadNacional,
 } from "../assets";
@@ -68,8 +66,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Zustand",
+    icon: zustand,
   },
   {
     name: "React JS",
@@ -98,14 +96,6 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 
