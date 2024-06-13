@@ -9,8 +9,10 @@ export default {
       },
       colors: {
         primary: "#08d108",
-        secondary: "#91bf91",
+        secondary: "#C3F9AD",
         tertiary: "#136313",
+        extra: "#ADFF2F",
+        complementary: "#FF0000",
         background: "#333333",
         "black-100": "#100d25",
         "black-200": "#090325",
