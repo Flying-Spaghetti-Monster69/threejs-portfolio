@@ -13,6 +13,7 @@ import {
   figma,
   docker,
   threejs,
+  universidadNacional,
 } from "../assets";
 
 const navLinks = [
@@ -21,12 +22,28 @@ const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "works",
+    title: "Works",
   },
   {
     id: "contact",
     title: "Contact",
+  },
+];
+
+const education = [
+  {
+    title: "Ingenieria de sistemas e informatica",
+    company_name: "Universidad Nacional de Colombia",
+    icon: universidadNacional,
+    iconBg: "#383E56",
+    date: "2023 - today",
+    points: [
+      "Honing problem solving and critical thinking skills for coding problems.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Developing habits of best practices, from planning and design to testing and deployment.",
+      "Acquiring abilities for self learning and development",
+    ],
   },
 ];
 
@@ -94,4 +111,4 @@ const technologies = [
 
 const projects = [];
 
-export { services, technologies, projects, navLinks };
+export { services, technologies, projects, navLinks, education };

@@ -8,6 +8,7 @@ import {
   About,
   Contact,
   StarsCanvas,
+  Experience,
 } from "./components";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         </div>
         <Works />
         <Tech />
+        <Experience />
         <About />
         <div className="relative z-0">
           <Contact />
