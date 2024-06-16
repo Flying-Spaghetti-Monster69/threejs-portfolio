@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.3.3",
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
+    "contentful": "^11.0.1",
     "framer-motion": "^11.2.10",
     "maath": "^0.10.7",
     "react": "^18.2.0",
@@ -20,7 +21,8 @@
     "react-parallax-tilt": "^1.7.228",
     "react-router-dom": "^6.23.1",
     "react-simple-typewriter": "^5.0.1",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-vertical-timeline-component": "^3.6.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

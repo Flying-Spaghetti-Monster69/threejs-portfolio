@@ -99,6 +99,4 @@ const technologies = [
   },
 ];
 
-const projects = [];
-
-export { services, technologies, projects, navLinks, education };
+export { services, technologies, navLinks, education };
