@@ -26,7 +26,12 @@ import universidadNacional from "./Universidad_Nacional_de_Colombia.svg";
 
 import www from "./world-wide-web.png";
 
+import UsaIcon from "./languagesIcons/united-states.png";
+import ColIcon from "./languagesIcons/colombia.png";
+
 export {
+  UsaIcon,
+  ColIcon,
   www,
   zustand,
   universidadNacional,

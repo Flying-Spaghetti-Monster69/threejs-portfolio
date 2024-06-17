@@ -10,6 +10,7 @@ import { education } from "../constants";
 import { textVariant } from "../utils/motion";
 import GlitchedText from "./GlitchedText";
 import { SectionWrapper } from "../hoc";
+import Languages from "./Languages";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -67,6 +68,8 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
+
+      <Languages />
     </>
   );
 };

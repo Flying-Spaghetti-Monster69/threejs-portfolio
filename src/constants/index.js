@@ -12,6 +12,8 @@ import {
   git,
   threejs,
   universidadNacional,
+  UsaIcon,
+  ColIcon,
 } from "../assets";
 
 const navLinks = [
@@ -99,4 +101,17 @@ const technologies = [
   },
 ];
 
-export { services, technologies, navLinks, education };
+const languages = [
+  {
+    name: "Spanish",
+    text: "Native speaker, fluent in any type of conversation.",
+    icon: ColIcon,
+  },
+  {
+    name: "English",
+    text: "B2+ level fluency specialized in the area of tech and software development.",
+    icon: UsaIcon,
+  },
+];
+
+export { services, technologies, navLinks, education, languages };
