@@ -24,10 +24,6 @@ import threejs from "./tech/Threejs-logo.png";
 
 import universidadNacional from "./Universidad_Nacional_de_Colombia.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import www from "./world-wide-web.png";
 
 export {
@@ -55,8 +51,4 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
 };
