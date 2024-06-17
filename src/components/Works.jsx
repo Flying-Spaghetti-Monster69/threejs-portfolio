@@ -37,13 +37,13 @@ const ProjectCard = ({
               onClick={() => window.open(githubUrl, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img src={github} alt="github" />
+              <img src={github} alt="github" className="w-10 h-10" />
             </div>
             <div
               onClick={() => window.open(url, "_blank")}
               className="bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img src={www} alt="www" />
+              <img src={www} alt="www" className="w-10 h-10" />
             </div>
           </div>
         </div>
