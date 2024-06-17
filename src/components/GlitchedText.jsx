@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 
 const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
   const [currentText, setCurrentText] = useState(text);
@@ -24,10 +24,6 @@ const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
       }
     }, 30);
   };
-
-  useEffect(() => {
-    handleMouseOver();
-  }, []);
 
   if (span) {
     const h1Text = currentText.slice(0, span);

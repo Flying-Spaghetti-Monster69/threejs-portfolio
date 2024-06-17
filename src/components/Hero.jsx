@@ -20,10 +20,10 @@ const Hero = () => {
             />
           </h1>
           <h2 className="mt-1">
-            A Passionate Learner Building Innovative Front-End Experiences.
+            Passionate Learner Building Innovative Front-End Experiences.
           </h2>
           <h3 className=" text-gray-600 text-sm text-center">
-            // drag to move background
+            // Try to hover on titles and drag to move background
           </h3>
         </div>
         <ComputersCanvas />

@@ -1,5 +1,5 @@
 import Tilt from "react-parallax-tilt";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { styles } from "../style";
 import { github, www } from "../assets";
