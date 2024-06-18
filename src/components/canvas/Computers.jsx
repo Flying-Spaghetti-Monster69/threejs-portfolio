@@ -7,6 +7,10 @@ import CanvasLoader from "../Loader";
 const Computers = () => {
   const computer = useGLTF("./computer_stack/scene.gltf");
 
+  useEffect(() => {
+    useGLTF.preload(computer); // Preload the specific model
+  }, []);
+
   return (
     <mesh>
       <hemisphereLight intensity={0.5} groundColor="black" />
