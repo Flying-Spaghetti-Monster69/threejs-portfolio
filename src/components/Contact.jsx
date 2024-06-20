@@ -22,9 +22,44 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        "service_rwbe0m6",
+        "template_rju82ah",
+        {
+          from_name: form.name,
+          to_name: "Felipe Garzon Melguizo",
+          from_email: form.email,
+          to_email: "felipegarzon908@gmail.com",
+          message: form.message,
+        },
+        "rbbVuTUvRFcGXrpKl"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
 
-  const handleChange = (e) => {};
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error);
+          alert("Something went wrong :(");
+        }
+      );
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
