@@ -30,7 +30,7 @@ const Contact = () => {
     setLoading(true);
 
     if (!form.message) {
-      alert("Please tell me what's your need!");
+      alert("Please leave me a message to know what your need is.");
       setLoading(false);
       return;
     }
