@@ -8,6 +8,9 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
+const emailRegex =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
 const Contact = () => {
   const [text] = useTypewriter({
     words: ["ideas?", "projects?", "goals?", "needs?", "dreams?"],
@@ -25,6 +28,19 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!form.message) {
+      alert("Please tell me what's your need!");
+      setLoading(false);
+      return;
+    }
+
+    if (!emailRegex.test(form.email)) {
+      alert("Please enter a valid email!");
+      setLoading(false);
+      return;
+    }
+
     emailjs
       .send(
         "service_rwbe0m6",
@@ -116,6 +132,7 @@ const Contact = () => {
           <button
             className="w-fit rounded-xl text-white shadow-md shadow-[#222222] py-3 px-8 outline-none bg-[#161616]"
             type="submit"
+            disabled={loading}
           >
             {loading ? "sending..." : "send"}
           </button>

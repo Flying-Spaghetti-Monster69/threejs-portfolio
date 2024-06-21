@@ -17,7 +17,6 @@ export const useProjectsStore = create((set) => ({
       const response = await client.getEntries({ content_type: "portfolio" });
       const projects = response.items.map((item) => {
         const { title, url, img, text, githubUrl, tags } = item.fields;
-        console.log(tags);
         const id = item.sys.id;
         const image = img?.fields?.file?.url;
         return { title, url, id, image, text, githubUrl, tags };
