@@ -1,12 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { Navbar, Hero, Contact, StarsCanvas } from "./components";
+import { Navbar, Hero } from "./components";
 import { Suspense, lazy } from "react";
 
 const Works = lazy(() => import("./components/Works"));
 const Tech = lazy(() => import("./components/Tech"));
 const Experience = lazy(() => import("./components/Experience"));
 const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"));
+const StarsCanvas = lazy(() => import("./components/StarsCanvas"));
 
 function App() {
   return (
@@ -21,11 +23,11 @@ function App() {
           <Tech />
           <Experience />
           <About />
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas />
+          </div>
         </Suspense>
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
       </div>
     </BrowserRouter>
   );
