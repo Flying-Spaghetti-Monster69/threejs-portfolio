@@ -8,7 +8,7 @@ const Tech = lazy(() => import("./components/Tech"));
 const Experience = lazy(() => import("./components/Experience"));
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
-const StarsCanvas = lazy(() => import("./components/StarsCanvas"));
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 function App() {
   return (
