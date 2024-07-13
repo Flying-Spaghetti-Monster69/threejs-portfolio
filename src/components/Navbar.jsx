@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../style";
 import { navLinks } from "../constants";
-import { menu, close } from "../assets";
+import { menu, close, github, x, linkedin } from "../assets";
 
 import { Cursor } from "react-simple-typewriter";
 
@@ -16,22 +16,51 @@ const Navbar = () => {
       className={`${styles.paddingX}  w-full flex items-center py-5 fixed top-0 z-20 bg-black`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center justify-center"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <h1 className="">
-            FELIPE
-            <span className="text-primary p-0">
-              .DEV()
-              <Cursor />
-            </span>
-          </h1>
-        </Link>
+        <div className="flex items-center justify-center">
+          <Link
+            to="/"
+            className="flex items-center justify-center"
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <h1 className="my-auto">
+              FELIPE
+              <span className="text-primary p-0">
+                .DEV()
+                <Cursor />
+              </span>
+            </h1>
+          </Link>
+          <div className="ml-6 flex flex-row items-center gap-4">
+            <Link
+              to={
+                "https://github.com/Flying-Spaghetti-Monster69/threejs-portfolio"
+              }
+              className="hover:scale-110 w-7 h-7"
+              target="_blank"
+            >
+              <img src={github} alt="github" className="h-full w-full" />
+            </Link>
+            <Link
+              to={
+                "https://www.linkedin.com/in/felipe-garzon-melguizo-0826971b5/"
+              }
+              className="hover:scale-110 w-7 h-7 p-1"
+              target="_blank"
+            >
+              <img src={linkedin} alt="github" className="h-full w-full" />
+            </Link>
+            <Link
+              to={"https://x.com/FelipeG10017424"}
+              className="hover:scale-110 w-7 h-7 p-1"
+              target="_blank"
+            >
+              <img src={x} alt="github" className="h-full w-full" />
+            </Link>
+          </div>
+        </div>
         <ul className=" list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => {
             return (

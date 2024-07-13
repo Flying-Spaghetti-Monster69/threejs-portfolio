@@ -19,6 +19,8 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
+import x from "./tech/x.svg";
+import linkedin from "./tech/linkedin.svg";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/Threejs-logo.png";
 
@@ -30,6 +32,8 @@ import UsaIcon from "./languagesIcons/united-states.png";
 import ColIcon from "./languagesIcons/colombia.png";
 
 export {
+  x,
+  linkedin,
   UsaIcon,
   ColIcon,
   www,
