@@ -43,11 +43,21 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-gray-400 text-[17px] max-w-3xl leading-[30px]"
       >
-        Aspiring front-end developer with a passion for learning and a thirst
-        for building engaging web experiences. Eager to contribute fresh ideas
-        and a dedication to mastering the intricacies of react and javascript.
-        Highly motivated and ready to learn from experienced professionals
-        within a collaborative development team.
+        Passionate frontend developer with a knack for crafting innovative and
+        visually stunning websites. My love for technology and problem-solving
+        drives me to create exceptional user experiences. I believe that a
+        website is more than just a collection of code; it's a digital canvas
+        where creativity and functionality intertwine.
+      </motion.p>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-gray-400 text-[17px] max-w-3xl leading-[30px]"
+      >
+        I have a deep-rooted curiosity and a thirst for knowledge, constantly
+        exploring new technologies and design trends. I thrive on challenges and
+        see them as opportunities to learn and grow. My goal is to stay at the
+        forefront of web development, delivering cutting-edge solutions that
+        exceed expectations.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
