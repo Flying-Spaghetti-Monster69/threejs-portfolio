@@ -37,7 +37,11 @@ const Works = () => {
               <Tilt
                 perspective={2500}
                 key={`project-${index}`}
-                className={`${project.className} cursor-pointer`}
+                className={`${
+                  project.className === "md:col-span-2"
+                    ? "md:col-span-2"
+                    : "md:col-span-1"
+                } cursor-pointer`}
               >
                 <a onClick={() => window.open(project.url, "_blank")}>
                   <BentoGridItem
