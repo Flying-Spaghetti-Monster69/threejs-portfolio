@@ -39,18 +39,20 @@ const Works = () => {
                 key={`project-${index}`}
                 className={`${project.className} cursor-pointer`}
               >
-                <BentoGridItem
-                  title={project.title}
-                  description={project.text}
-                  header={
-                    <HeaderGrid
-                      url={project.url}
-                      image={project.image}
-                      githubUrl={project.githubUrl}
-                    />
-                  }
-                  icon={<TagsGrid tags={project.tags} />}
-                />
+                <a onClick={() => window.open(project.url, "_blank")}>
+                  <BentoGridItem
+                    title={project.title}
+                    description={project.text}
+                    header={
+                      <HeaderGrid
+                        url={project.url}
+                        image={project.image}
+                        githubUrl={project.githubUrl}
+                      />
+                    }
+                    icon={<TagsGrid tags={project.tags} />}
+                  />
+                </a>
               </Tilt>
             ))}
         </BentoGrid>
