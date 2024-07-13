@@ -16,10 +16,21 @@ export const useProjectsStore = create((set) => ({
     try {
       const response = await client.getEntries({ content_type: "portfolio" });
       const projects = response.items.map((item) => {
-        const { title, url, img, text, githubUrl, tags } = item.fields;
+        const { title, url, img, text, githubUrl, tags, className, order } =
+          item.fields;
         const id = item.sys.id;
         const image = img?.fields?.file?.url;
-        return { title, url, id, image, text, githubUrl, tags };
+        return {
+          title,
+          url,
+          id,
+          image,
+          text,
+          githubUrl,
+          tags,
+          className,
+          order,
+        };
       });
       if (projects.length > 0) {
         set({ loading: false, projects });

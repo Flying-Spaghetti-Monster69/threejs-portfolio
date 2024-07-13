@@ -7,13 +7,13 @@ import {
   reactjs,
   redux,
   tailwind,
-  nodejs,
   mongodb,
   git,
   threejs,
   universidadNacional,
   UsaIcon,
   ColIcon,
+  typescript,
 } from "../assets";
 
 const navLinks = [
@@ -84,8 +84,8 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Typescript",
+    icon: typescript,
   },
   {
     name: "MongoDB",
