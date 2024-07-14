@@ -50,14 +50,14 @@ const Navbar = () => {
               className="hover:scale-110 w-7 h-7 p-1"
               target="_blank"
             >
-              <img src={linkedin} alt="github" className="h-full w-full" />
+              <img src={linkedin} alt="linkedin" className="h-full w-full" />
             </Link>
             <Link
               to={"https://x.com/FelipeG10017424"}
               className="hover:scale-110 w-7 h-7 p-1"
               target="_blank"
             >
-              <img src={x} alt="github" className="h-full w-full" />
+              <img src={x} alt="x.com" className="h-full w-full" />
             </Link>
           </div>
         </div>

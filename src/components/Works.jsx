@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import HeaderGrid from "./HeaderGrid";
 import TagsGrid from "./TagsGrid";
 import { BentoGrid, BentoGridItem } from "./ui/Bento-Grid";
+import { Link } from "react-router-dom";
 
 const Works = () => {
   const { projects, fetchProjects, loading } = useProjectsStore(
@@ -43,7 +44,7 @@ const Works = () => {
                     : "md:col-span-1"
                 } cursor-pointer`}
               >
-                <a onClick={() => window.open(project.url, "_blank")}>
+                <Link to={project.url} target="_blank">
                   <BentoGridItem
                     title={project.title}
                     description={project.text}
@@ -52,11 +53,12 @@ const Works = () => {
                         url={project.url}
                         image={project.image}
                         githubUrl={project.githubUrl}
+                        title={project.title}
                       />
                     }
                     icon={<TagsGrid tags={project.tags} />}
                   />
-                </a>
+                </Link>
               </Tilt>
             ))}
         </BentoGrid>
