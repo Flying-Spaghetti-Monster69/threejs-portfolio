@@ -23,20 +23,24 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    email: false,
+    message: false,
+  });
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!form.message) {
-      alert("Please leave me a message to know what your need is.");
-      setLoading(false);
-      return;
-    }
+    const newErrors = {
+      email: !emailRegex.test(form.email),
+      message: !form.message,
+    };
 
-    if (!emailRegex.test(form.email)) {
-      alert("Please enter a valid email!");
+    setErrors(newErrors);
+
+    if (newErrors.email || newErrors.message) {
       setLoading(false);
       return;
     }
@@ -64,6 +68,10 @@ const Contact = () => {
             email: "",
             message: "",
           });
+          setErrors({
+            email: false,
+            message: false,
+          });
         },
         (error) => {
           console.log(error);
@@ -75,6 +83,7 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
+    setErrors({ ...errors, [name]: false });
   };
 
   return (
@@ -103,29 +112,37 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-[#161616] py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-[#161616] py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-2 border-[#161616] font-medium`}
             />
           </label>
           <label className="flex flex-col">
-            <span className="font-medium mb-4">Your Email</span>
+            <span className="font-medium mb-4">
+              Your Email <span className="text-red-600">*</span>
+            </span>
             <input
               type="text"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-[#161616] py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-[#161616] py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-2 border-[#161616]  font-medium ${
+                errors.email ? "border-2 border-red-600" : ""
+              }`}
             />
           </label>
           <label className="flex flex-col">
-            <span className="font-medium mb-4">Your message</span>
+            <span className="font-medium mb-4">
+              Your Message <span className="text-red-600">*</span>
+            </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="bg-[#161616] py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-[#161616] py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-2 border-[#161616]  font-medium ${
+                errors.message ? "border-2 border-red-600" : ""
+              }`}
             />
           </label>
 
