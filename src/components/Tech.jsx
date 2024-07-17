@@ -1,14 +1,14 @@
 import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import { isAndroid, isChromium } from "react-device-detect";
+import { isChrome, isMobile } from "react-device-detect";
 import { DivWithMovingBorder } from "./ui/Moving-Border";
 
 const Tech = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {/* webgl contexts in android is limited chrome is very limited, this is a temporal fix */}
-      {isChromium && isAndroid
+      {isChrome && isMobile
         ? technologies.map((tech) => (
             <DivWithMovingBorder
               borderClassName={"border-primary"}
