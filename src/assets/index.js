@@ -23,6 +23,7 @@ import x from "./tech/x.svg";
 import linkedin from "./tech/linkedin.svg";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/Threejs-logo.png";
+import nextJs from "./tech/next-js.svg";
 
 import universidadNacional from "./Universidad_Nacional_de_Colombia.svg";
 
@@ -34,6 +35,7 @@ import ColIcon from "./languagesIcons/colombia.png";
 export {
   x,
   linkedin,
+  nextJs,
   UsaIcon,
   ColIcon,
   www,

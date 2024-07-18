@@ -18,9 +18,9 @@ function App() {
           <Navbar />
           <Hero />
         </div>
+        <Works />
+        <Tech />
         <Suspense fallback={<div>Loading...</div>}>
-          <Works />
-          <Tech />
           <Experience />
           <About />
           <div className="relative z-0">

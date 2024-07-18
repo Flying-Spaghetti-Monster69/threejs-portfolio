@@ -14,6 +14,8 @@ import {
   UsaIcon,
   ColIcon,
   typescript,
+  nextJs,
+  nodejs,
 } from "../assets";
 
 const navLinks = [
@@ -88,8 +90,12 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Next JS",
+    icon: nextJs,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
   },
   {
     name: "Three JS",
