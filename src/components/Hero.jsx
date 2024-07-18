@@ -6,7 +6,7 @@ import GlitchedText from "./GlitchedText";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-[100svh] mx-auto">
       <div className={` w-full absolute inset-0 top-[70px] z-0 `}>
         <div
           className={` absolute top-[120px] inset-0 w-fit h-fit justify-center items-center mx-auto z-10 flex flex-col`}
@@ -14,17 +14,19 @@ const Hero = () => {
           <h1 className="flex flex-row">
             <GlitchedText
               text={"HELLO, I'M FELIPE"}
-              classStyles={"text-6xl text-white "}
+              classStyles={
+                "px-2 text-5xl text-center sm:p-0 sm:text-6xl text-white "
+              }
               span={11}
-              spanStyles={"text-6xl text-primary"}
+              spanStyles={"text-5xl sm:text-6xl text-primary"}
             />
           </h1>
-          <h2 className="mt-1">
+          <h2 className="px-2 text-sm sm:text-base text-center sm:text-left sm:p-0 mt-1">
             Passionate Learner Building Innovative Front-End Experiences.
           </h2>
-          <h3 className=" text-gray-600 text-sm text-center">
+          <h2 className=" px-2 text-xs sm:p-0 text-gray-600 sm:text-sm text-center">
             // Try to hover on titles and drag to move background
-          </h3>
+          </h2>
         </div>
         <ComputersCanvas />
         <div className="absolute xs:bottom-10 bottom-32 w-fit mt-56 centered-div">
