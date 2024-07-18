@@ -38,6 +38,7 @@ const ComputerCanvas = () => {
         />
         <Computer />
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };
