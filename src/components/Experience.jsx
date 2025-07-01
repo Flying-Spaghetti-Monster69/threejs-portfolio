@@ -3,10 +3,11 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import PropTypes from "prop-types";
 
 import { motion } from "framer-motion";
 import { styles } from "../style";
-import { education } from "../constants";
+import { expierence } from "../constants";
 import { textVariant } from "../utils/motion";
 import GlitchedText from "./GlitchedText";
 import { SectionWrapper } from "../hoc";
@@ -25,7 +26,7 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
-      iconStyle={{ background: "#222222" }}
+      iconStyle={{ background: experience.iconBg }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       contentStyle={{ background: "#222222", color: "#fff" }}
     >
@@ -58,12 +59,15 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} text-primary`}>
           my journey so far
         </p>
-        <GlitchedText text={"Education"} classStyles={styles.sectionHeadText} />
+        <GlitchedText
+          text={"Experience"}
+          classStyles={styles.sectionHeadText}
+        />
       </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {education.map((experience, index) => (
+          {expierence.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
         </VerticalTimeline>
@@ -72,6 +76,16 @@ const Experience = () => {
       <Languages />
     </>
   );
+};
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    company_name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+    iconBg: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default SectionWrapper(Experience, "experience");

@@ -4,10 +4,10 @@ import GlitchedText from "./GlitchedText";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[100svh] mx-auto">
+    <section className="relative w-full h-[100svh] mx-auto ">
       <div className={` w-full absolute inset-0 top-[70px] z-0 `}>
         <div
-          className={` absolute top-[120px] inset-0 w-fit h-fit justify-center items-center mx-auto z-10 flex flex-col`}
+          className={`absolute top-[120px] inset-0 w-fit h-fit justify-center items-center mx-auto z-10 flex flex-col`}
         >
           <h1 className="flex flex-row">
             <GlitchedText
@@ -20,10 +20,11 @@ const Hero = () => {
             />
           </h1>
           <h2 className="px-2 text-sm sm:text-base text-center sm:text-left sm:p-0 mt-1">
-            Passionate Learner Building Innovative Front-End Experiences.
+            Passionate Learner Building Innovative Full-Stack Experiences.
           </h2>
-          <h2 className=" px-2 text-xs sm:p-0 text-gray-600 sm:text-sm text-center">
-            // Try to hover on titles and drag to move background
+          {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+          <h2 className=" px-4 text-xs sm:p-0 text-gray-400 bg-black sm:text-sm text-center">
+            // hover on titles and drag to move the 3d background
           </h2>
         </div>
         <ComputersCanvas />

@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import PropTypes from "prop-types";
 
 const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
   const [currentText, setCurrentText] = useState(text);
@@ -10,7 +11,7 @@ const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
     iterationRef.current = 0;
     intervalRef.current = setInterval(() => {
       const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      let newText = currentText.split("").map((letter, index) => {
+      let newText = currentText.split("").map((_, index) => {
         if (index < iterationRef.current) {
           return text[index];
         }
@@ -19,7 +20,7 @@ const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
       setCurrentText(newText.join(""));
 
       iterationRef.current += 1 / 4;
-      if (iterationRef.current >= text.length) {
+      if (iterationRef.current > text.length) {
         clearInterval(intervalRef.current);
       }
     }, 30);
@@ -43,6 +44,12 @@ const GlitchedText = ({ text, classStyles, span, spanStyles }) => {
       {currentText}
     </h1>
   );
+};
+GlitchedText.propTypes = {
+  text: PropTypes.string.isRequired,
+  classStyles: PropTypes.string,
+  span: PropTypes.number,
+  spanStyles: PropTypes.string,
 };
 
 export default GlitchedText;
