@@ -38,7 +38,7 @@ const Navbar = () => {
               to={
                 "https://github.com/Flying-Spaghetti-Monster69/threejs-portfolio"
               }
-              className="hover:scale-110 w-7 h-7"
+              className="hover:scale-110 w-6 h-6 sm:w-7 sm:h-7"
               target="_blank"
             >
               <img src={github} alt="github" className="h-full w-full" />
@@ -47,14 +47,14 @@ const Navbar = () => {
               to={
                 "https://www.linkedin.com/in/felipe-garzon-melguizo-0826971b5/"
               }
-              className="hover:scale-110 w-7 h-7 p-1"
+              className="hover:scale-110 w-6 h-6 sm:w-7 sm:h-7 p-1"
               target="_blank"
             >
               <img src={linkedin} alt="linkedin" className="h-full w-full" />
             </Link>
             <Link
               to={"https://x.com/FelipeG10017424"}
-              className="hover:scale-110 w-7 h-7 p-1"
+              className="hover:scale-110 w-6 h-6 sm:w-7 sm:h-7 p-1"
               target="_blank"
             >
               <img src={x} alt="x.com" className="h-full w-full" />

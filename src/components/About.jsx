@@ -43,21 +43,22 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-gray-400 text-[17px] max-w-3xl leading-[30px]"
       >
-        Passionate frontend developer with a knack for crafting innovative and
-        visually stunning websites. My love for technology and problem-solving
-        drives me to create exceptional user experiences. I believe that a
-        website is more than just a collection of code; it's a digital canvas
-        where creativity and functionality intertwine.
+        I started out writing C++ and building small side projects; things like
+        terminal-based games and calculators to solve school problems. That
+        curiosity eventually led me to JavaScript, where I made some landing
+        pages and a simple blackjack game, and from there I dove into modern web
+        development with React and Next.js. Since then, I've been hooked on
+        building intuitive, responsive user experiences.
       </motion.p>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-gray-400 text-[17px] max-w-3xl leading-[30px]"
       >
-        I have a deep-rooted curiosity and a thirst for knowledge, constantly
-        exploring new technologies and design trends. I thrive on challenges and
-        see them as opportunities to learn and grow. My goal is to stay at the
-        forefront of web development, delivering cutting-edge solutions that
-        exceed expectations.
+        I'm now looking for a frontend or full-stack role (ideally react or
+        next) where I can keep growing and shipping great products, preferably
+        in a fast-paced startup environment with a collaborative team. If you're
+        hiring and need someone who’s been in love with coding since the old no
+        AI days, I’d love to connect!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

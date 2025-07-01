@@ -1,5 +1,5 @@
 import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
+import { technologies, badges } from "../constants";
 import { DivWithMovingBorder } from "./ui/Moving-Border";
 import GlitchedText from "./GlitchedText";
 import { styles } from "../style";
@@ -23,6 +23,23 @@ const Tech = () => {
             <p className="text-center">{tech.name}</p>
           </DivWithMovingBorder>
         ))}
+      </div>
+      <GlitchedText
+        text={"Badges"}
+        classStyles={`${styles.sectionHeadText} mt-6`}
+      />
+      <div className="flex flex-row flex-wrap justify-center gap-10">
+        <DivWithMovingBorder
+          borderClassName={"border-primary"}
+          containerClassName={"w-fit h-fit bg-[#222222]"}
+          className=" p-4 cursor-default flex flex-row items-center   rounded-md"
+        >
+          {badges.map((badge) => (
+            <div key={badge.name}>
+              <img src={badge.icon} alt={badge.name} className="w-32 h-32" />
+            </div>
+          ))}
+        </DivWithMovingBorder>
       </div>
     </section>
   );

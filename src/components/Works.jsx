@@ -24,13 +24,9 @@ const Works = () => {
             .sort((a, b) => a.order - b.order)
             .map((project, index) => (
               <Tilt
-                perspective={2500}
+                perspective={3000}
                 key={`project-${index}`}
-                className={`${
-                  project.className === "md:col-span-2"
-                    ? "md:col-span-2"
-                    : "md:col-span-1"
-                } cursor-pointer`}
+                className={`${project.className} cursor-pointer`}
               >
                 <Link to={project.url} target="_blank">
                   <BentoGridItem

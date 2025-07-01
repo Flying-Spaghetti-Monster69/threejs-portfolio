@@ -5,6 +5,9 @@ import close from "./close.svg";
 
 import zustand from "./tech/zustand-logo.png";
 import css from "./tech/css.png";
+import python from "./tech/python.svg";
+import Cpp_Logo from "./tech/C++_Logo.svg";
+import postgreSQL from "./tech/postgreSQL.png";
 import docker from "./tech/docker.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -30,6 +33,9 @@ import UsaIcon from "./languagesIcons/united-states.png";
 import ColIcon from "./languagesIcons/colombia.png";
 
 export {
+  python,
+  Cpp_Logo,
+  postgreSQL,
   turingBox,
   aws,
   x,

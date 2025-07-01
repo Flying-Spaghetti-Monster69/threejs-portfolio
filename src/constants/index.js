@@ -17,7 +17,11 @@ import {
   nodejs,
   aws,
   turingBox,
+  postgreSQL,
+  python,
+  Cpp_Logo,
 } from "../assets";
+import { awsCloudFoundations, awsETC, awsIntroToAI } from "../assets/badges";
 import {
   ecommerce,
   mixmaster,
@@ -179,12 +183,16 @@ const projects = [
 
 const navLinks = [
   {
-    id: "about",
-    title: "About",
-  },
-  {
     id: "works",
     title: "Works",
+  },
+  {
+    id: "Tech",
+    title: "Tech",
+  },
+  {
+    id: "about",
+    title: "About",
   },
   {
     id: "contact",
@@ -213,10 +221,10 @@ const expierence = [
     iconBg: "#222222",
     date: "2023 - today",
     points: [
-      "Honing problem solving and critical thinking skills for coding problems.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Developing habits of best practices, from planning and design to testing and deployment.",
-      "Acquiring abilities for self learning and development",
+      "Honed problem solving and critical thinking skills for coding problems.",
+      "Collaborated with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Developed habits of best practices, from planning and design to testing and deployment.",
+      "Acquired abilities for self learning and development",
     ],
   },
 ];
@@ -270,16 +278,32 @@ const technologies = [
     icon: nextJs,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "AWS",
+    icon: aws,
   },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgreSQL,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "C++",
+    icon: Cpp_Logo,
   },
 ];
 
@@ -296,4 +320,27 @@ const languages = [
   },
 ];
 
-export { services, technologies, navLinks, expierence, languages, projects };
+const badges = [
+  {
+    name: "AWS Cloud Foundations",
+    icon: awsCloudFoundations,
+  },
+  {
+    name: "AWS ETC member",
+    icon: awsETC,
+  },
+  {
+    name: "AWS Intro to AI",
+    icon: awsIntroToAI,
+  },
+];
+
+export {
+  services,
+  technologies,
+  navLinks,
+  expierence,
+  languages,
+  projects,
+  badges,
+};
