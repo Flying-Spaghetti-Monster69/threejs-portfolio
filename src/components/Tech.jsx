@@ -31,14 +31,21 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-center gap-10">
         <DivWithMovingBorder
           borderClassName={"border-primary"}
-          containerClassName={"w-fit h-fit bg-[#222222]"}
-          className=" p-4 cursor-default flex flex-row items-center   rounded-md"
+          containerClassName={
+            "w-fit h-fit bg-[#222222] flex flex-row flex-wrap"
+          }
+          className="p-4 cursor-default rounded-md"
         >
-          {badges.map((badge) => (
-            <div key={badge.name}>
-              <img src={badge.icon} alt={badge.name} className="w-32 h-32" />
-            </div>
-          ))}
+          <div className="flex flex-row flex-wrap items-center justify-center gap-6">
+            {badges.map((badge) => (
+              <img
+                key={badge.name}
+                src={badge.icon}
+                alt={badge.name}
+                className="w-32 h-32 object-contain m-2"
+              />
+            ))}
+          </div>
         </DivWithMovingBorder>
       </div>
     </section>

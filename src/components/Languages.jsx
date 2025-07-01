@@ -31,7 +31,12 @@ const Languages = () => {
       <div
         className={`bg-gradient-to-t from-zinc-900 to-zinc-800 rounded-2xl w-fit h-min-[300px] mx-auto sm:px-16 md:px-32 px-8 sm:py-8 py-5`}
       >
-        <motion.div variants={textVariant()}>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 1 }}
+          variants={textVariant()}
+        >
           <GlitchedText
             text={"Languages"}
             classStyles={`${styles.sectionHeadText} text-primary text-center `}

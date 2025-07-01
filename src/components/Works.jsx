@@ -13,7 +13,12 @@ import { projects } from "../constants";
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 1 }}
+        variants={textVariant(0.1)}
+      >
         <p className={`${styles.sectionSubText} text-primary`}>My work</p>
         <GlitchedText text={"Projects"} classStyles={styles.sectionHeadText} />
       </motion.div>

@@ -28,7 +28,12 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 1 }}
+        variants={textVariant()}
+      >
         <p className={`${styles.sectionSubText} text-complementary`}>
           introduction
         </p>
